@@ -6,7 +6,7 @@ import useAuthStore from '@/store/authStore';
 import axios from 'axios';
 import { Eye, EyeOff } from "lucide-react";
 
-const page = () => {
+const Page = () => {
 
     const [email, setEmail] = useState("");
     const [otp, setOtp] = useState("");
@@ -387,4 +387,4 @@ const page = () => {
 
 }
 
-export default page
+export default Page
