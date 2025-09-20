@@ -16,7 +16,7 @@ const rub = Rubik({
   subsets: ["latin"],
 });
 
-const page = () => {
+const Page = () => {
 
   const searchParams = useSearchParams();
   const [links, setLinks] = useState([{ link: "", linktext: "" }]);
@@ -122,14 +122,9 @@ const page = () => {
             </div>
           </div>
         </div>
-
-        {/* column 2 */}
-        {/* <div className="col2 flex items-center justify-center mr-24">
-        <img src="/Column.png" className='object-cover w-[600px] h-[400px]' alt="image" />
-      </div> */}
       </div >
     </>
   )
 }
 
-export default page
+export default Page
