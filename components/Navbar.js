@@ -12,9 +12,9 @@ const Navbar = () => {
   const router = useRouter();
   const { user, isAuthenticated, logout, checkAuth, edit } = useAuthStore();
 
-  useEffect(() => {
-    checkAuth()
-  }, []);
+useEffect(() => {
+  checkAuth();
+}, [checkAuth]);
 
   const loginKaro = () => {
     router.push("/login");
