@@ -12,6 +12,7 @@ const Navbar = () => {
   const router = useRouter();
   const { user, isAuthenticated, logout, checkAuth, edit } = useAuthStore();
 
+const checkAuth = useAuthStore(state => state.checkAuth);
 useEffect(() => {
   checkAuth();
 }, [checkAuth]);
