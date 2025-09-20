@@ -14,7 +14,7 @@ const Navbar = () => {
 
   useEffect(() => {
     checkAuth()
-  }, []);
+  }, [checkAuth]);
 
   const loginKaro = () => {
     router.push("/login");
