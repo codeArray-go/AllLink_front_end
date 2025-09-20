@@ -4,6 +4,7 @@ import { Rubik } from "next/font/google";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import useAuthStore from "@/store/authStore";
+import Image from "next/image";
 
 const rub = Rubik({
   variable: "--font-Rubik",
@@ -77,13 +78,16 @@ export default function Home() {
                     items-center justify-center text-center lg:text-left">
 
           {/* Left Image */}
-          <div className="w-full max-w-[380px] md:max-w-[420px] lg:max-w-[450px] flex justify-center">
-            <img
-              src="/Developer.png"
-              alt="illustration"
-              className="w-full h-auto object-contain"
-            />
-          </div>
+    <div className="w-full max-w-[380px] md:max-w-[420px] lg:max-w-[450px] flex justify-center">
+      <Image
+        src="/Developer.png"
+        alt="illustration"
+        width={450} // set max possible width
+        height={450} // set proportional height
+        className="w-full h-auto object-contain"
+        priority // optional: ensures faster load
+      />
+    </div>
 
           {/* Right Content */}
           <div className="w-full lg:w-1/2 flex flex-col gap-6 items-center lg:items-start">
